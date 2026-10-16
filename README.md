@@ -16,6 +16,12 @@
 - 任务三：Keil 软件仿真 + 逻辑分析仪观察 USART1_SR 波形，实测一字节周期 89.28μs，实际波特率 ≈112kbps（设定 115200）
 - 完整 Keil 工程 + HAL 驱动全套（含 DMA）
 
+
+### 实验5：定时器 PWM 呼吸灯（experiment5-pwm/）
+- TIM2 定时中断（1s）翻转 PA0 红灯，LED 以 2s 周期亮灭（任务1）
+- TIM3_CH3（PB0）PWM 模式输出 2kHz，主循环渐变 CCR（0→499→0）实现呼吸灯，周期约 2s（任务2）
+- Keil 软件仿真 + 逻辑分析仪：TIM3_CCR3 三角波（呼吸周期 1.999959s）、TIM3_CNT 锯齿波（0.500406ms ≈ 2kHz）
+- 完整 Keil 工程 + HAL 驱动全套（含 TIM）
 ## 开发环境
 - Keil MDK5 / STM32F1xx HAL 库 V1.8.7
 - 烧录：FlyMcu（USART1）/ ST-Link
